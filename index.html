@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Z & F1Z1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px; /* Space between cards */
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/021/508/536/small/white-star-shotting-star-transparent-bokeh-stars-free-free-png.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 350px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            padding: 15px;
+            background-size: cover;
+            background-position: center;
+            height: 35vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .wavez-card {
+            background-image: url('https://cdn.arstechnica.net/wp-content/uploads/2015/06/LastStand_Final_1080P-copy.png');
+        }
+
+        .f1z1-card {
+            background-image: url('https://cdn2.unrealengine.com/Fortnite%2Fblog%2Fannouncing-fortnite-battle-royale%2FFortniteBattleRoyale_OutlookScreenshot-1920x1080-552bd26a97f66973123f3d9375767ff467662c89.jpg');
+        }
+
+        .tags {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .card-content {
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .play-btn {
+            background-color: #00BFFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .play-btn:hover {
+            background-color: #008CBA;
+            transform: translateY(-2px);
+        }
+
+        .scroll-indicator {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .card {
+                height: 30vh;
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 12px;
+            }
+
+            .play-btn {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"></div>
+            <input type="text" class="search-bar" placeholder="Search">
+            <div class="nav-buttons">
+                <button class="nav-btn">CATEGORIE</button>
+                <button class="nav-btn">TRENDING</button>
+                <button class="nav-btn">DISCOVER</button>
+                <button class="nav-btn">NEW</button>
+            </div>
+        </header>
+        <div class="card wavez-card">
+            <div class="tags">
+                <span class="tag">OPEN WORLD</span>
+                <span class="tag">SURVIVAL</span>
+            </div>
+            <div class="card-content">
+                <h2 class="title">WAVE Z</h2>
+                <p class="description">Wave Z brings a thrilling twist to the Survival genre, set in a sprawling open-world overrun by the undead. This unique Fortnite-inspired experience combines the pulse-pounding action of player-versus-player combat with the ever-present danger of a zombie apocalypse.</p>
+                <button class="play-btn">Play On Fortnite</button>
+            </div>
+        </div>
+        <div class="card f1z1-card">
+            <div class="tags">
+                <span class="tag">BATTLE ROYAL</span>
+                <span class="tag">PROXIMITY VOICE</span>
+                <span class="tag">OPEN WORLD</span>
+            </div>
+            <div class="card-content">
+                <h2 class="title">F1Z1 - KING OF THE HILL</h2>
+                <p class="description">Welcome to F1Z1, a high-intensity battle royale experience set in a dynamic world. Drawing inspiration from the raw, gameplay of H1Z1, F1Z1 pits 30 players against each other in a fast-paced fight for survival.</p>
+                <button class="play-btn">Play On Fortnite</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">SCROLL TO SEE MORE ↓</div>
+    </div>
+</body>
+</html>
